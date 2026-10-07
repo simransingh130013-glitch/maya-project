@@ -2,65 +2,169 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
   <meta name="theme-color" content="#05050a">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"
+  >
   <meta name="apple-mobile-web-app-title" content="Maya AI">
+
   <link rel="manifest" href="manifest.json">
-  <title>Maya AI</title>
   <link rel="stylesheet" href="style.css">
+
+  <title>Maya AI</title>
 </head>
+
 <body>
+
   <main class="app">
+
+    <!-- TOP BAR -->
     <header class="topbar">
+
       <div>
-        <div class="brand">MAYA <span>AI</span></div>
-        <div class="status"><i></i><span id="statusText">Ready</span></div>
-      </div>
-      <button id="infoBtn" class="icon-btn" aria-label="About Maya">ⓘ</button>
-    </header>
+        <div class="brand">
+          MAYA <span>AI</span>
+        </div>
 
-    <section class="orb-section">
-      <div class="orb-wrap" id="orbWrap">
-        <img class="orb" src="assets/maya_animation.gif" alt="Maya AI">
-      </div>
-      <h1 id="response">Hello Boss</h1>
-      <p id="subResponse">Tap the microphone and say “Maya”.</p>
-    </section>
-
-    <section class="command-card">
-      <div class="input-row">
-        <input id="commandInput" type="text" autocomplete="off"
-               placeholder="Type a command...">
-        <button id="sendBtn" class="send-btn">➤</button>
+        <div class="status">
+          <i></i>
+          <span id="statusText">Ready</span>
+        </div>
       </div>
 
-      <button id="micBtn" class="mic-btn">
-        <span class="mic-icon">🎙️</span>
-        <span id="micLabel">Talk to Maya</span>
+      <button
+        id="infoBtn"
+        class="icon-btn"
+        aria-label="About Maya"
+      >
+        ⓘ
       </button>
 
-      <div class="quick-actions">
-        <button data-command="Open YouTube">YouTube</button>
-        <button data-command="Open Google">Google</button>
-        <button data-command="Search YouTube for AI">Search</button>
+    </header>
+
+
+    <!-- MAYA ANIMATION -->
+    <section class="orb-section">
+
+      <div class="orb-wrap" id="orbWrap">
+
+        <!-- FIXED GIF PATH -->
+        <img
+          class="orb"
+          src="maya_animation.gif"
+          alt="Maya AI"
+        >
+
       </div>
+
+      <h1 id="response">Hello Boss</h1>
+
+      <p id="subResponse">
+        Tap the microphone and say “Maya”.
+      </p>
+
     </section>
 
-    <section class="log-card">
-      <div class="log-title">Conversation</div>
-      <div id="log"></div>
+
+    <!-- COMMAND AREA -->
+    <section class="command-card">
+
+      <div class="input-row">
+
+        <input
+          id="commandInput"
+          type="text"
+          autocomplete="off"
+          placeholder="Type a command..."
+        >
+
+        <button
+          id="sendBtn"
+          class="send-btn"
+        >
+          ➤
+        </button>
+
+      </div>
+
+
+      <button
+        id="micBtn"
+        class="mic-btn"
+      >
+        <span class="mic-icon">🎙️</span>
+
+        <span id="micLabel">
+          Talk to Maya
+        </span>
+      </button>
+
+
+      <div class="quick-actions">
+
+        <button data-command="Open YouTube">
+          YouTube
+        </button>
+
+        <button data-command="Open Google">
+          Google
+        </button>
+
+        <button data-command="Search YouTube for AI">
+          Search
+        </button>
+
+      </div>
+
     </section>
+
+
+    <!-- CONVERSATION -->
+    <section class="log-card">
+
+      <div class="log-title">
+        Conversation
+      </div>
+
+      <div id="log"></div>
+
+    </section>
+
   </main>
 
+
+  <!-- INFO WINDOW -->
   <dialog id="infoDialog">
+
     <h2>Maya AI</h2>
-    <p>iPhone web edition — a browser-based Maya interface inspired by Maya AI 1.2.</p>
-    <p>Voice commands, web search, YouTube, Google, and spoken responses work in the browser.</p>
-    <button id="closeInfo">Close</button>
+
+    <p>
+      iPhone web edition — a browser-based
+      Maya AI interface inspired by Maya AI 1.2.
+    </p>
+
+    <p>
+      Voice commands, web search, YouTube,
+      Google, and spoken responses work in
+      the browser.
+    </p>
+
+    <button id="closeInfo">
+      Close
+    </button>
+
   </dialog>
 
+
   <script src="app.js"></script>
+
 </body>
 </html>
