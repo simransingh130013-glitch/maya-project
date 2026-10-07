@@ -1,0 +1,9 @@
+{
+  "name": "Maya AI",
+  "short_name": "Maya AI",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#030308",
+  "theme_color": "#05050a",
+  "icons": []
+}
